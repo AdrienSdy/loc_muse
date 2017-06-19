@@ -11,7 +11,7 @@ export default class Player extends Component {
         super(props);
         
         //this.play = this.play.bind(this);
-        this.pause = this.pause.bind(this);
+        //this.pause = this.pause.bind(this);
     }
     
     play() {
@@ -19,7 +19,7 @@ export default class Player extends Component {
     }
 
     pause() {
-        this.props.pause();
+        PlayerModule.pause(error => console.log(error));
     }
     
     render() {

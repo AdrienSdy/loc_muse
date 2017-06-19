@@ -14,6 +14,7 @@ import java.io.IOException;
 
 public class PlayerModule extends ReactContextBaseJavaModule {
     private MediaPlayer mediaPlayer = new MediaPlayer();
+    private String music;
 
     public PlayerModule(ReactApplicationContext reactContext) {
         super(reactContext);
@@ -41,6 +42,12 @@ public class PlayerModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void selectMusic(String url, Callback callback){
+        if(this.music == url){
+            if(this.mediaPlayer.isPlaying()){
+                this.pause();
+            }
+        }
+        this.music = url;
         this.mediaPlayer.reset();
         try {
             this.mediaPlayer.setDataSource(url);
@@ -48,14 +55,12 @@ public class PlayerModule extends ReactContextBaseJavaModule {
         } catch(IOException e){
             callback.invoke(e.getMessage());
         }
-        this.mediaPlayer.start();
     }
 
     // Met la musique en pause
     @ReactMethod
     public void pause(Callback callback) {
         this.mediaPlayer.pause();
-        callback.invoke("paused");
     }
 
     // Modifie le volume à partir de la valeur envoyée

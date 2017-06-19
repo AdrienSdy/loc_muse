@@ -10,15 +10,6 @@ import PlayerModule from './module/Player';
 
 class App extends React.Component {
 
-
-  play() {
-    PlayerModule.play();
-  }
-
-  pause() {
-    PlayerModule.pause(error => console.log(error));
-  }
-
   selectMusic(url) {
     PlayerModule.selectMusic(url, error => console.log(error));
   }
@@ -27,7 +18,7 @@ class App extends React.Component {
     return (
       <View>
         <PlayList selectMusic={this.selectMusic} />
-        <Player play={this.play} pause={this.pause} />
+        <Player />
       </View>
     );
   }
