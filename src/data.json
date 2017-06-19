@@ -9,10 +9,27 @@
         },
         {
             "id": 1,
-            "name": "Shape of You",
-            "author": "Ed Sheeran",
+            "name": "The Ocean",
+            "author": "Mike Perry",
             "img": "https://i.ytimg.com/vi/5JxgDJvqGmM/maxresdefault.jpg",
             "url": "https://dc769.4shared.com/img/v-SMsTUoca/bc413aeb/dlink__2Fdownload_2Fv-SMsTUoca_2FMike_5FPerry_5F-_5FThe_5FOcean_5Fft_5FShy_5F.mp3_3Fsbsr_3Ddb06b36fa8df28004aa04136f3836add9ac_26bip_3DODUuNjguMTM3LjEyNw_26lgfp_3D7200_26bip_3DODUuNjguMTM3LjEyNw/preview.mp3" 
+        },
+        {
+            "id": 2,
+            "name": "Down by the River",
+            "author": "Milky Chance",
+            "img": "https://i.ytimg.com/vi/qlGQoxzdwP4/maxresdefault.jpg",
+            "url": "https://dc719.4shared.com/img/PuZ3S7gace/82b9006e/dlink__2Fdownload_2FPuZ3S7gace_2FMilky_5FChance_5F-_5FDown_5Fby_5Fthe_5FRiv.mp3_3Fsbsr_3D450888ecb520cd8c83eab33617faf31a9ac_26bip_3DODUuNjguMTM3LjEyNw_26lgfp_3D7200_26bip_3DODUuNjguMTM3LjEyNw/preview.mp3"
         }
-    ]
+    ],
+    "location": {
+        "home": {
+            "latitude": 48.856517,
+            "longitude": 2.2790214 
+        },
+        "supdeweb": {
+            "latitude": 48.8573157,
+            "longitude": 2.2804664
+        }
+    }
 }

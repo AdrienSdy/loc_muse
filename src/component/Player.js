@@ -5,22 +5,31 @@ import {
 } from 'react-native';
 
 import PlayerModule from '../module/Player';
+import LocationModule from '../module/Location';
+
+import { location } from '../data.json';
 
 export default class Player extends Component {
     constructor(props) {
         super(props);
-        
-        //this.play = this.play.bind(this);
-        //this.pause = this.pause.bind(this);
+
+        this.getLocation = this.getLocation.bind(this);
+        this.play = this.play.bind(this);
+        this.pause = this.pause.bind(this);
     }
-    
+
     play() {
-        PlayerModule.play();
+        this.props.play();
     }
 
     pause() {
-        PlayerModule.pause(error => console.log(error));
+        this.props.pause();
     }
+
+    getLocation() {
+        this.props.getLocation();
+    }
+
     
     render() {
         return (

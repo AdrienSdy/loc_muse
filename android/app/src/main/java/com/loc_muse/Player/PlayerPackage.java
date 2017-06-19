@@ -28,6 +28,7 @@ public class PlayerPackage implements ReactPackage {
         List<NativeModule> modules = new ArrayList<>();
 
         modules.add(new PlayerModule(reactContext));
+        modules.add(new LocationModule(reactContext));
 
         return modules;
     }
