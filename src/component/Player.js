@@ -9,14 +9,17 @@ import PlayerModule from '../module/Player';
 export default class Player extends Component {
     constructor(props) {
         super(props);
+        
+        //this.play = this.play.bind(this);
+        this.pause = this.pause.bind(this);
     }
     
     play() {
-        PlayerModule.play(error => console.log(error));
+        PlayerModule.play();
     }
 
     pause() {
-        PlayerModule.pause(error => console.log(error));
+        this.props.pause();
     }
     
     render() {

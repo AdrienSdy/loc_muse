@@ -1,0 +1,18 @@
+{
+    "musics": [
+        {
+            "id": 0,
+            "name": "Shape of You",
+            "author": "Ed Sheeran",
+            "img": "https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg",
+            "url": "https://dc600.4shared.com/img/of-0R-KLca/3f89964f/dlink__2Fdownload_2Fof-0R-KLca_2FShape_5Fof_5FYou.mp3_3Fsbsr_3Dec425c2072614565758360a00515de5a9ac_26bip_3DODUuNjguMTM3LjEyNw_26lgfp_3D7200_26bip_3DODUuNjguMTM3LjEyNw/preview.mp3" 
+        },
+        {
+            "id": 1,
+            "name": "Shape of You",
+            "author": "Ed Sheeran",
+            "img": "https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg",
+            "url": "https://dc600.4shared.com/img/of-0R-KLca/3f89964f/dlink__2Fdownload_2Fof-0R-KLca_2FShape_5Fof_5FYou.mp3_3Fsbsr_3Dec425c2072614565758360a00515de5a9ac_26bip_3DODUuNjguMTM3LjEyNw_26lgfp_3D7200_26bip_3DODUuNjguMTM3LjEyNw/preview.mp3" 
+        }
+    ]
+}

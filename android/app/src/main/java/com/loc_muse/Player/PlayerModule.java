@@ -31,64 +31,26 @@ public class PlayerModule extends ReactContextBaseJavaModule {
 
     //This annotations expose method at javascript
     @ReactMethod
-    public void play(Callback callback) {
-        String url = "https://www.mixcloud.com/skybrom1/the-skybrom-show-episode-1/";
-        try {
-            this.mediaPlayer.setDataSource(url);
-        } catch(IOException e){
-            callback.invoke(e.getMessage());
-        }
-        try {
-            this.mediaPlayer.prepare(); // might take long! (for buffering, etc)
-        } catch(IOException e){
-            callback.invoke(e.getMessage());
-        }
-
-        this.mediaPlayer.start();
-
-
-        // Local Music
-        //MediaPlayer mediaPlayer = MediaPlayer.create(context, R.raw.sound_file_1);
-        //mediaPlayer.start(); // no need to call prepare(); create() does that for you
-        //Toast.makeText(getReactApplicationContext(), message, duration).show();
-    }
-
-    @ReactMethod
-    public void setMusic(String url, Boolean startMusic, Callback callback){
-        this.mediaPlayer.reset();
-        // On transforme notre string en Uri pour être lu par le mediaPlayer
-        Uri myUri = Uri.parse(url);
-
-        try {
-            this.mediaPlayer.setDataSource(getReactApplicationContext(), myUri);
-        } catch(IOException e){
-            callback.invoke(e.getMessage());
-        }
-
-        try {
-            this.mediaPlayer.prepare();
-        } catch(IOException e){
-            callback.invoke(e.getMessage());
-        }
-
-        if (startMusic){
-            this.mediaPlayer.start();
-        }
-    }
-
-    // @ReactMethod indique que la méthode sera disponible dans react
-    // Lance une musique ou la relance si on s'était mis en pause
- /*   @ReactMethod
-    public void play(Callback callback) {
+    public void play() {
         if (this.mediaPlayer.isPlaying()){
             this.mediaPlayer.seekTo(this.mediaPlayer.getCurrentPosition());
-            this.mediaPlayer.start();
-        } else {
-            this.mediaPlayer.start();
-            callback.invoke("here I go");
-        }
+        } 
+        this.mediaPlayer.start();
     }
-*/
+
+
+    @ReactMethod
+    public void selectMusic(String url, Callback callback){
+        this.mediaPlayer.reset();
+        try {
+            this.mediaPlayer.setDataSource(url);
+            this.mediaPlayer.prepare();            
+        } catch(IOException e){
+            callback.invoke(e.getMessage());
+        }
+        this.mediaPlayer.start();
+    }
+
     // Met la musique en pause
     @ReactMethod
     public void pause(Callback callback) {
